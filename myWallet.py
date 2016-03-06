@@ -14,16 +14,14 @@ if intro == 1:
 elif intro == 2:
 	print "\n\nSIGN IN"
 	name = raw_input("ENTER YOUR NAME: ")
-else:
-	print "ERROR"
 	if name == fileName:
-		print "\nWELCOME BACK " + (name)
-		print "YOU HAVE "
+		print "\nWELCOME BACK %s" % (name)
+		print "\nYOU HAVE "
 		fileMoney = open("amount.txt")
 		print (fileMoney.readlines())
 		fileMoney.close()
 		while 3 > 1:
-        update = raw_input("\nUPDATE: ")
+                    update = raw_input("\nUPDATE: ")
 		    print "YOU HAVE" + (update)
 		    getOut = raw_input("GET OUT? ")
 		    if getOut == "yes":
@@ -32,3 +30,5 @@ else:
 		    	print "\n"
 	else:
 		print "ERROR"
+else:
+	print "ERROR"
