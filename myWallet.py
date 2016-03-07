@@ -14,9 +14,10 @@ if intro == 1:
 elif intro == 2:
 	print "\n\nSIGN IN"
 	fileName = open ("name.txt", "r")
-	fileName.readlines()
+	fileNameVar = fileName.readline()
+	fileName.close()
 	name = raw_input("ENTER YOUR NAME: ")
-	if name == fileName:
+	if name == fileNameVar:
 		print "\nWELCOME BACK %s" % (name)
 		print "\nYOU HAVE "
 		fileMoney = open("amount.txt")
