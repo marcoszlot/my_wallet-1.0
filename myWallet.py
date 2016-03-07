@@ -21,11 +21,13 @@ elif intro == 2:
 		print "\nWELCOME BACK %s" % (name)
 		print "\nYOU HAVE "
 		fileMoney = open("amount.txt")
-		print (fileMoney.readlines())
+		fileMoneyVar = fileMoney.readline()
 		fileMoney.close()
+		print fileMoneyVar
 		while 3 > 1:
-                    update = raw_input("\nUPDATE: ")
-		    print "YOU HAVE" + (update)
+                       updating = input("\nUPDATE: ")
+		    plusMoney = int(a) + updating
+		    print "\nYOU HAVE %s" % (plusMoney)
 		    getOut = raw_input("GET OUT? ")
 		    if getOut == "yes":
 		    	break;
