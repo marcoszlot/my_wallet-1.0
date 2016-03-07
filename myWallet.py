@@ -3,7 +3,7 @@ intro = input("PRESS 1 TO CREATE AN ACCOUNT OR PRESS 2 TO SIGN IN: ")
 if intro == 1:
 	print "\n\nCREATING AN ACCOUNT"
 	firstName = raw_input("ENTER YOUR NAME: ")
-	firstMoney = input("ENTER THE AMOUNT OF MONEY YOU HAVE: ")
+	firstMoney = raw_input("ENTER THE AMOUNT OF MONEY YOU HAVE: ")
 	fileName = open ("name.txt", "w")
 	fileName.write(firstName)
 	fileName.close()
@@ -13,6 +13,8 @@ if intro == 1:
 	print "PLEASE RESTART (My Wallet) to continue"
 elif intro == 2:
 	print "\n\nSIGN IN"
+	fileName = open ("name.txt", "r")
+	fileName.readlines()
 	name = raw_input("ENTER YOUR NAME: ")
 	if name == fileName:
 		print "\nWELCOME BACK %s" % (name)
