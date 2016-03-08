@@ -26,7 +26,7 @@ elif intro == 2:
 		print fileMoneyVar
 		while 3 > 1:
                        updating = input("\nUPDATE: ")
-		    plusMoney = int(a) + updating
+		     plusMoney = int(fileMoneyVar) + updating
 		    print "\nYOU HAVE %s" % (plusMoney)
 		    getOut = raw_input("GET OUT? ")
 		    if getOut == "yes":
