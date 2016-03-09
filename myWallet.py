@@ -31,6 +31,9 @@ elif intro == 2:
 		getOut = raw_input("GET OUT? ")
 		if getOut == "yes":
 			break;
+			fileMoney = open ("amount.txt", "w")
+			fileMoney.write(plusMoney)
+			fileMoney.close()
 		else:
 		    print "\n"
 	else:
