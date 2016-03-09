@@ -24,17 +24,12 @@ elif intro == 2:
 		fileMoneyVar = fileMoney.readline()
 		fileMoney.close()
 		print fileMoneyVar
-		while 3 > 1:
-			updating = input("\nUPDATE: ")
-			plusMoney = int(fileMoneyVar) + updating
-			print "\nYOU HAVE %s" % (plusMoney)
-			getOut = raw_input("GET OUT? ")
-			if getOut == "yes":
-			fileMoney = open ("amount.txt", "w")
-			fileMoney.write(str(plusMoney))
-			fileMoney.close()
-			else:
-			    print "\n"
+		updating = input("\nUPDATE: ")
+		plusMoney = int(fileMoneyVar) + updating
+		print "\nYOU HAVE %s" % (plusMoney)
+		fileMoney = open ("amount.txt", "w")
+		fileMoney.write(str(plusMoney))
+		fileMoney.close()
 	else:
 		print "ERROR"
 else:
